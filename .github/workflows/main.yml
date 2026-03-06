@@ -1,0 +1,18 @@
+name: 나의 첫 CI 테스트
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 코드 가져오기
+        uses: actions/checkout@v3
+
+      - name: 테스트 실행
+        run: echo "✅ 자동 테스트 통과!"
+
+      - name: 완료 메시지
+        run: echo "🚀 배포 준비 완료!"
